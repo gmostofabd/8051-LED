@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="utf-8">
+	<meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Code,Proteus">
+	<title>8051 LED</title>
+</head>
+
+
+<body  bgcolor=white>
+
+	<div id="header_common"><img src="assets/images/github_banner.png" alt="common_header" width="1083" height="150"></div>
+	<div id="topic_container"><h2>Topic : LED Interfacing with 8051</h2></div>
+
+
+  <table align = center width=1000 height=1000  bgcolor= white>
+	  <tr>
+	    <td width=200 bgcolor=white valign=top>
+
+		    <div id="exp_lst_cont">
+            <ol><h3>8051 Experiment List:</h3>
+                <li><a href>LED Blink</a></li>
+                <li>Push Button Interfacing</li>
+                <li><a href="https://gmostofabd.github.io/8051-7Segment/">Seven Segment Display Interfacing</a></li>
+                <li>LED Dot Matrix Display Interfacing</li>
+                <li><a href="https://gmostofabd.github.io/8051-LCD/">LCD Interfacing</a></li>
+                <li>Potentiometer (or Analog) Reading</li>
+                <li>Key Pad Matrix Interfacing</li>
+                <li><a href="https://gmostofabd.github.io/dc-motor-8051/">DC Motor Interfacing</a></li>
+                <li><a href="https://gmostofabd.github.io/stepper-motor-8051/">Stepper Motor Interfacing</a></li>
+                <li>RTC Interfacing</li>
+                <li>EEPROM Interfacing</li>
+                <li>Bluetooth interfacing</li>
+                <li>7 Segment Clock</li>
+                <li>Serial Communication</li>
+            </ol>
+        </div>
+
+        <div id="proj_lst_cont">
+            <ol><h3>8051 Projects:</h3>
+              <li>Access Control System</li>
+              <li>6 Digit Clock</li>
+              <li>IR Remote Load ON OFF</li>
+              <li>Line Follower</li>
+              <li>Incubator Controller</li>
+            </ol>
+        </div>         
+
+    </td>
+
+
+
+	  <td width=600 align=center valign=top style="padding-left: 10px; padding-right: 10px;">
+		
+		<h3>Introduction:</h3>
+          <blockquote>
+		  <p>
+            We are very familiar with “Hello world!” basic program code in the initial 
+            stage of any programming language to learn some basic things. Similarly to 
+            get started with any Microcontroller, LED interfacing is a basic and simplest 
+            experiment to see a physical output.
+            
+            <br><br>Each Microcontroller is different in its architecture, but the 
+            interfacing concepts are almost same for all. One can understand the concept 
+            of input-output configurations of the general-purpose I/O port in a 
+            microcontroller with the simple LED blinking project. This tutorial will 
+            explain the method of interfacing LEDs with 8051 microcontrollers.
+	      </p>
+          </blockquote>
+
+        <h3>Hardware Discussion : Light Emitting Diode (LED)</h3>
+	
+            <div class="box_70"><img src="assets/images/led_looks.jpg"/></div>
+            <div class="capt_cont">Fig: Some of available LCD modules</div>
+
+
+
+
+      <h3>LED Features :</h3>
+            
+      <ul>
+          <li>Normal LEDs consume very Low Power while <strong>High Power LEDs</strong>  are very bright and are often used in Flashlights, Automobile Headlamps, Spotlights, etc.</li>
+          <li>Fast Switching</li>
+          <li>Physically Robust</li>
+          <li>Long Lasting</li> 
+          <li>Available in colors, sizes and shapes.</li>
+          <li>Lower price.</li>
+      </ul>
+        <br>
+      <h3>LED Basics :</h3>
+
+        <div class="box_80"><img src="assets/images/LED_Config1.png" alt="LCD mdules"></div>
+        <div class="capt_cont">Fig: LED Symbol and Physical Configuration</div>
+
+
+        <h3>How it works?</h3>
+        <blockquote>
+        <p>
+            The symbol of LED is formed by merging the symbol of P-N Junction diode and outward
+             arrows. These outward arrows symbolise the light radiated by the light emitting diode.
+             
+             <br><br>
+        
+             From the above figure we can have a lot of information regarding LED. The longer leg 
+             is Anode and the smaller one is cathode pin. There will be a notch on the surface 
+             indicates cathode side. Another process to determine the anode cathode pin if you see 
+             inside, the cathode plate is larger than the anode plate. The anode cathode pin can 
+             also be identified using a multi-meter or a 5V power supply unit.
+          
+          <br><br>From the chart at right of above figure we can see that each LED has its own 
+          forward voltage drop across the PN junction and this parameter which is determined by 
+          the semiconductor material used, is the forward voltage drop for a specified amount of 
+          forward conduction current, typically for a forward current of 20mA.
+        </p>
+        </blockquote>
+
+
+        <h3>LED Series Resistors:</h3>
+        <blockquote>
+        <p>In most cases LEDs are operated from a low voltage DC supply, with a series resistor, 
+            Rs used to limit the forward current to a safe value from say 5mA for a simple LED 
+            indicator to 30mA or more where a high brightness light output is needed.
+            
+            <br><br>The series resistor value R is calculated by simply using Ohm´s Law, by 
+            knowing the required forward current I of the LED, the supply voltage VS across the 
+            combination and the expected forward voltage drop of the LED, VF at the required 
+            current level, the current limiting resistor is calculated as below:
+        </p>
+        </blockquote>
+
+
+        <h3>LED Series Resistance Calculation</h3>
+
+        <div class="box_ckt_diag"><img src="assets/images/led_res5.png"/></div>
+        <div class="capt_cont">Fig: LED Series Resistance Calculation</div>
+
+
+
+        <h3>Circuit Diagram :</h3>
+        <div class="box_ckt_diag"><img src="assets/images/LED_8051_Ckt.png" alt="ckt_diagram" width="600" height="350"></div>
+        <div class="capt_cont">Fig: LED interfacing (4 bit mode) with 8051</div>
+
+        <h3>Circuit Discussion :</h3>
+
+        <blockquote>
+            <p>Here is the circuit diagram of the AT89S51 interfaced 2 LEDs on two different PORT Pins. 
+                One is connected to PORT-0 at PIN-7 and second one is connected  to PORT2 PIN0 of the 
+                Microcontroller. Both the LEDs are driven through resistors for limiting current.
+                
+                <br><br>The image shown above is directly screen capture from our Proteus simulation.
+                By observing the simulator markers (i.e. red and blue squares expresses logic 1 and 
+                logic 0 accordingly.) When the both LED are ON we can see one of our port pin is 
+                showing high or logic 1 while other one is logic 0. It is happening due to to 
+                connection logic of the LEDs. We have connected the cathode pin of LED1 (D1) to the 
+                microcontroller pin. So, we need to make the corresponding pin low to illuminate the 
+                LED. And for the LED2 (D2) which is vice versa as is its reverse connection configuration.
+
+                <br><br>In this microcontroller, pin source current is limited to 10mA per pin 
+                (please refer datasheet). So even if the resistor is not provided with LED, there will 
+                not be any damage to the LEDs. But in good practice the resistor is always used.
+
+                <br><br>For our case the circuit diagram is as follows. The circuit schematic has drawn 
+                over PROTEUS software. The circuit is nothing but same as figure above except the 
+                mandatory circuit part of a 8051 microcontroller.
+            </p>
+            </blockquote>
+
+
+        <h3>Assembly Program : <a href="https://github.com/gmostofabd/8051-7Segment/blob/main/codes/7seg_1d_8051.asm">led_8051.asm</a></h3>
+        <div class="prog_cont">
+            <embed type="text/html" src="codes/led_blink_8051.asm"  width="500" height="500">
+        </div>
+
+        <h3>Code Discussion:</h3>
+            <blockquote>
+            <p>
+                The code lines are properly commented as and when it is required. Assumed that, the 
+                comments are sufficient to inform you about the corresponding line of instruction. 
+                The delay function at the end creates a nominal delay in blinking the LEDs. The accurate 
+                value of time delay could be calculated with the known value of instruction execution 
+                time but is not done here since it is beyond the scope of this article. Each time when 
+                this function is called in main a delay is generated.
+            </p>
+            </blockquote>
+
+
+
+        <h3>Post Run Discussion:  LED Chaser (Code Optimization)</h3>
+        <blockquote>
+        <p>
+            A problem can be solved in multiple ways having different efficiencies. Beginnersmay skip 
+            the efficiency issues but in good programming practices alternates arealways a thirst of 
+            developers. Below is an example of some ways out for a sameoperation.
+
+          <br><br>Example : Write code that will run 8 LEDs on a port one by one at a predefinedinterval.
+        </p>
+        </blockquote>
+
+    </td>
+
+	  <td valign=top>
+		
+      <div class="box_this_lesson">
+        <h3>This lesson includes:</h3>
+        <ol>
+          <li>Introduction</li>
+          <li>Hardware Discussion</li>
+          <li>Circuit Diagram</li>
+          <li>Assembly Code</li>
+          <li>Post Run Discussion</li>
+          <li>Exercises</li>
+          <li>Tips and Tricks</li>
+        </ol>
+      </div>
+
+
+      <div class="vdo_lst_cont">
+          <h3>Lesson Video</h3>
+          <iframe width="155" height="100"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+      </div>
+
+      <div class="box_this_lesson">
+          <h3>Important Downloads</h3>
+          <ol class="inside">
+            <li>Proteus 8.7</li>
+            <li>MIDE-51 IDE</li>
+            <li>AVRDUDES</li>
+          </ol>
+      </div>
+
+
+      <div class="box_this_lesson">
+          <span><b>Lesson Contents</b></span>
+          <ol>
+              <li>Circuit Diagram (Proteus)</li>
+              <li>Lesson PDF</li>
+              <li>7seg_1d_8051.asm</li>
+              <li>7seg_2d_8051.asm</li>
+              <li>7segment Datasheet PDF</li>
+              <li>Exercise Solutions</li>
+          </ol>
+      </div>
+
+    </td>
+
+
+	</tr>
+         
+  </table>
+
+  <table width=1000 height=50 align= center border="1">
+	  <tr>
+			<td>Prev topic: Push Button Interfacing with 8051</td>
+			<td>Next topic: LED Matrix interfacing with 8051</td>
+		</tr>
+  </table>
+
+	<div id="footer_common">
+    <div class="prj_footer_cell">
+      <font face="Verdana, Arial, Helvetica, sans-serif" color="#0000ff" size="2" ><strong>Top Tutorial sites </strong></font>
+      <div id="navcontainer">
+        <ul >
+          <li id="active"><a href="http://www.melab-bd.com/home.html"><strong>Circuit Today</strong></a></li>
+          <li><a href="http://www.melab-bd.com/about.html"><strong>Radio Electronics</strong></a></li>
+          <li><a href="http://www.melab-bd.com/product.html"><strong>MikroE</strong></a></li>
+          <li><a href="http://www.melab-bd.com/project.html"><strong>8051 Projects</strong></a></li>
+          <li><a href="http://www.melab-bd.com/trainings.html"><strong>101 Components</strong></a></li>
+         </ul>
+      </div>	
+    </div>
+  </div>
+    
+
+</body>
+
+
+</html>

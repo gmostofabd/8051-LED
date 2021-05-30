@@ -33,6 +33,19 @@ ul{
     color: mediumblue;
   }  
 
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 10px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }  
+
 li{
   margin: 10px 0;
   }  

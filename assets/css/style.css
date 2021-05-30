@@ -131,7 +131,13 @@ blockquote {
     background-color: #e4e1e1;
   }
 
-
+  .ul_exp {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 190px;
+    background-color: #f1f1f1;
+  }
 
 
   

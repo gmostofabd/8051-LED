@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7,82 +6,38 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="https://github.com/gmostofabd/melab-store/blob/main/Images/melab-bd_logo.jpg?raw=true" type="image/x-icon">
 
-  	<meta charset="utf-8">
+  <script src="assets/sharedfooter.js" type="text/javascript" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#sidebar1').load("assets/sidebar1.html");
+    });
+  </script>
+
+  <meta charset="utf-8">
 	<meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Code,Proteus">
+
+  <!--Facebook Open graph Mete Tags-->
+	<meta property="og:url"                content="https://gmostofabd.github.io/8051-LED/" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="Exp-01 : 8051 Simple I/O Interface" />
+	<meta property="og:description"        content="8051 Microcontroller statr-up experiment in minutes" />
+	<meta property="og:image"              content="assets/images/LED_8051_Ckt.png" />
 	
-	<title>8051 LED</title>
+	<title>8051 Simple I/O Programming</title>
 </head>
 
 	
 <body  bgcolor=white>
 
 	<div id="header_common"><img src="https://github.com/gmostofabd/melab-store/blob/main/Images/8051_Tutorial_Banner.png?raw=true" alt="common_banner"></div>
-	<div id="topic_container"><h2>Topic : LED Interfacing with 8051</h2></div>
+	<div id="topic_container"><h2>Exp. 01 : LED Interfacing with 8051</h2></div>
 
 
   <table align = center width=1000 height=1000  bgcolor= white>
 	  <tr>
-	    <td width=200 bgcolor=white valign=top>
-
-	<div id="exp_lst_cont">
-          <h3>Theories :</h3>
-          <ul class="ul_exp">
-            <li><a href="https://gmostofabd.github.io/8051-LED/">Introduction to Microcontroller</a></li>
-            <li><a href="https://gmostofabd.github.io/8051-Push-Button/">8051 Architecture</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-7Segment/">8051 Instruction Set</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-LED-Matrix/">Assembly Programming</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-Dev-Tools/">Development Tools & Environment</a></li>
-          </ul>
-
-          <h3>Experiments :</h3>
-            <ul class="ul_exp">
-              <li><a href="https://gmostofabd.github.io/8051-LED/">LED Blink</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-Push-Button/">Push Button Interfacing</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-7Segment/">Seven Segment Display Interfacing</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-LED-Matrix/">LED Dot Matrix Display Interfacing</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-LCD/">LCD Interfacing</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-Analog/">Potentiometer (or Analog) Reading</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-Keypad/">Key Pad Matrix Interfacing</a></li>
-              <li><a href="https://gmostofabd.github.io/dc-motor-8051/">DC Motor Interfacing</a></li>
-              <li><a href="https://gmostofabd.github.io/stepper-motor-8051/">Stepper Motor Interfacing</a></li>
-              <li><a href="https://gmostofabd.github.io/8051-RTC/">RTC Interfacing</a></li>
-            </ul>
-
-
-		
-          <h3>Projects :</h3>
-            <ul class="ul_exp">
-              <li><a href="https://www.circuitstoday.com/ultrasonic-range-finder-using-8051">Ultrasonic range finder using 8051</a></li>
-              <li><a href="https://www.circuitstoday.com/water-level-controller-using-8051">Water Level Controller using 8051</a></li>
-              <li><a href="https://www.circuitstoday.com/voltmeter-using-8051">Voltmeter using 8051</a></li>
-              <li><a href="https://www.circuitstoday.com/thermometer-using-8051">Digital thermometer using 8051</a></li>
-              <li><a href="https://www.circuitstoday.com/interfacing-gsm-module-to-8051">Interface GSM Module to 8051</a></li>
-              <li><a href="https://www.circuitstoday.com/rfid-based-access-control-system-using-8051">RFID Door Access Control System</a></li>
-              <li><a href="https://www.circuitstoday.com/digital-door-lock-password-based-security-8051">Digital Door Lock – Password based</a></li>
-              <li><a href="https://www.circuitstoday.com/ultrasonic-water-level-controller-using-8051">Ultrasonic water level controller using 8051</a></li>
-              <li><a href="https://www.circuitstoday.com/interfacing-pir-sensor-to-8051">Interfacing PIR sensor to 8051</a></li>
-              <li><a href="https://www.circuitstoday.com/interfacing-rfid-module-to-8051">Interfacing RFID to 8051microcontroller</a></li>
-            </ul>
-
-          <h3>Downloads :</h3>
-            <ul class="ul_exp">
-              <li><a href="https://www.circuitstoday.com/ultrasonic-range-finder-using-8051">MIDE-51 (IDE)</a></li>
-              <li><a href="https://www.circuitstoday.com/water-level-controller-using-8051">Proteus (CKT Simulator)</li>
-              <li><a href="https://www.circuitstoday.com/voltmeter-using-8051">AVRDUDESS (Programmer)</a></li>
-            </ul>
-
-
-		    
-		    
-	</div>
-
-		    
-
-    </td>
-
-
-
-	  <td width=600 align=center valign=top style="padding-left: 10px; padding-right: 10px;">
+	  <td width=800 align=center valign=top bgcolor=white>
 		
 		<h3>Introduction:</h3>
           <blockquote>
@@ -106,12 +61,11 @@
             <div class="capt_cont">Fig: Some of available LCD modules</div>
 
 
-
-
       <h3>LED Features :</h3>
             
       <ul>
-          <li>Normal LEDs consume very Low Power while <strong>High Power LEDs</strong>  are very bright and are often used in Flashlights, Automobile Headlamps, Spotlights, etc.</li>
+          <li>Normal LEDs consume very Low Power while <strong>High Power LEDs</strong>are very bright 
+            and are often used in Flashlights, Automobile Headlamps, Spotlights, etc.</li>
           <li>Fast Switching</li>
           <li>Physically Robust</li>
           <li>Long Lasting</li> 
@@ -235,12 +189,12 @@
 
       <div class="vdo_lst_cont">
           <h3>Lesson Video</h3>
-          <iframe width="155" height="100"
+          <iframe width="184" height="100"
           src="https://www.youtube.com/embed/tgbNymZ7vqY">
             </iframe>
       </div>
 
-
+      <div id="sidebar1"></div>
 
     </td>
 
@@ -251,26 +205,14 @@
 
   <table width=1000 height=50 align= center border="1">
 	  <tr>
-			<td>Prev topic: Push Button Interfacing with 8051</td>
-			<td>Next topic: LED Matrix interfacing with 8051</td>
+			<td>Prev topic: 8051 Development Tools</td>
+			<td>Next topic: Push Button interfacing with 8051</td>
 		</tr>
   </table>
 
-	<div id="footer_common">
-    <div class="prj_footer_cell">
-      <font face="Verdana, Arial, Helvetica, sans-serif" color="#0000ff" size="2" ><strong>Top Tutorial sites </strong></font>
-      <div id="navcontainer">
-        <ul >
-          <li id="active"><a href="http://www.melab-bd.com/home.html"><strong>Circuit Today</strong></a></li>
-          <li><a href="http://www.melab-bd.com/about.html"><strong>Radio Electronics</strong></a></li>
-          <li><a href="http://www.melab-bd.com/product.html"><strong>MikroE</strong></a></li>
-          <li><a href="http://www.melab-bd.com/project.html"><strong>8051 Projects</strong></a></li>
-          <li><a href="http://www.melab-bd.com/trainings.html"><strong>101 Components</strong></a></li>
-         </ul>
-      </div>	
-    </div>
-  </div>
+	<div id="footer_common"><footer-component></footer-component></div>
     
+  
 
 </body>
 

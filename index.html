@@ -56,9 +56,27 @@
           </blockquote>
 
         <h3>Hardware Discussion : Light Emitting Diode (LED)</h3>
+          <blockquote>
+            <p>
+              A Light Emitting Diode (LED) is a semiconductor device, which can emit 
+              light when an electric current passes through it. 
+            </p>
+          </blockquote>
 	
             <div class="box_70"><img src="assets/images/led_looks.jpg"/></div>
             <div class="capt_cont">Fig: Some of available LCD modules</div>
+
+          <blockquote>
+            <p>
+              LEDs are commonly green, amber, or red, but they can be an assortment of other colors as they've 
+              become popular with case lighting. Below are examples of how an LED could 
+              be used with a computer.
+
+              <br><br>Keyboard LEDs, Mouse Leds, Motherboard LED, Network card, Wi-Fi, switch, and router LED,
+              Battery LED, Floppy, hard drive, CD-ROM, and other drives LED, Printer, speakers, monitor, and other devices,
+              and many more.
+            </p>
+          </blockquote>
 
 
       <h3>LED Features :</h3>
@@ -123,8 +141,8 @@
 
 
         <h3>Circuit Diagram :</h3>
-        <div class="box_ckt_diag"><img src="assets/images/LED_8051_Ckt.png" alt="ckt_diagram" width="600" height="350"></div>
-        <div class="capt_cont">Fig: LED interfacing (4 bit mode) with 8051</div>
+        <div class="box_90"><img src="assets/images/LED_8051_Ckt.png" alt="ckt_diagram" width="600" height="350"></div>
+        <div class="capt_cont">Fig: LED interfacing with 8051</div>
 
         <h3>Circuit Discussion :</h3>
 
@@ -145,9 +163,6 @@
                 (please refer datasheet). So even if the resistor is not provided with LED, there will 
                 not be any damage to the LEDs. But in good practice the resistor is always used.
 
-                <br><br>For our case the circuit diagram is as follows. The circuit schematic has drawn 
-                over PROTEUS software. The circuit is nothing but same as figure above except the 
-                mandatory circuit part of a 8051 microcontroller.
             </p>
             </blockquote>
 
@@ -174,13 +189,51 @@
         <h3>Post Run Discussion:  LED Chaser (Code Optimization)</h3>
         <blockquote>
         <p>
-            A problem can be solved in multiple ways having different efficiencies. Beginnersmay skip 
-            the efficiency issues but in good programming practices alternates arealways a thirst of 
+            A problem can be solved in multiple ways having different efficiencies. Beginners may skip 
+            the efficiency issues but in good programming practices alternates are always a thirst of 
             developers. Below is an example of some ways out for a sameoperation.
 
           <br><br>Example : Write code that will run 8 LEDs on a port one by one at a predefinedinterval.
         </p>
         </blockquote>
+
+
+        <h3>Circuit Diagram : LED Chaser</h3>
+        <div class="box_90"><img src="assets/images/led_chaser.png" alt="ckt_diagram" width="600" height="350"></div>
+        <div class="capt_cont">Fig: 8 LED circuit</div>
+
+
+        <h3>Assembly Program : <a href="">led_chaser.asm</a></h3>
+          <div class="prog_cont">
+            <embed type="text/html" src="codes/LED_Chaser_8051.asm"  width="500" height="500">
+          </div>
+
+          <blockquote>
+            <p>
+              Now we can have a brief discussion on code logics. In the above code we can see 
+              the body code can be writen as many forms:
+
+              <br><br>Example -1: 
+
+              <br><br>Example -2:
+            </p>
+          </blockquote>
+
+        <h3>Exercises :</h3>
+          <ul><h4>Lab Task :</h4>
+            <li>8 LED Chaser with different patterns.</li>
+          </ul>
+
+          <ul><h4>Home Task :</h4>
+            <li>Use two ports and create a Heart shape in your Proteus simulator. Then write an 
+              assembly program to run it as possible way as you can. for example a running or flashing heart.
+              </li>
+          </ul>
+
+
+
+          <div class="box_50"><img src="assets/images/hw_1.png" alt="ckt_diagram" width="600" height="350"></div>
+
 
     </td>
 
@@ -189,9 +242,7 @@
 
       <div class="vdo_lst_cont">
           <h3>Lesson Video</h3>
-          <iframe width="184" height="100"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
+          <iframe width="186" height="130" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
       </div>
 
       <div id="sidebar1"></div>

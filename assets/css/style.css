@@ -118,6 +118,35 @@ blockquote {
   background-color: #f1f1f1;
 }
 
+.exercise_section{
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  background-color: rgb(214, 232, 235);
+}
+
+
+.exercise_section h3{
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 160%;
+  text-align: center;
+  color: rgb(95, 86, 93);
+  background-color: rgb(141, 199, 199);
+}
+
+.exercise_section h4{
+  color: #4e504f;
+  margin: 0;
+  padding: 0;
+}
+
+.exercise_section ul{
+  list-style: none;
+}
+
+
+
 #footer_common{
   width:960px; height:250px;
   margin-left: auto ; margin-right: auto ;
